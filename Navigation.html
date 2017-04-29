@@ -1,0 +1,86 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Navigation</title>
+
+    <script type="text/javascript">
+    function output(resultText){
+      document.getElementById('output').childNodes[0].nodeValue=resultText;
+    }
+
+    function show_confirm(){
+      var confirmation=confirm("What would you like to do?");
+      if (confirmation==true){
+        output("Confirmed");
+      }
+      else{
+        output("canceled");
+      }
+    }
+
+    function show_alert(){
+      alert("alert");
+    }
+    function show_prompt(){
+      var response = prompt("What is Your Name?","Name");
+      output(response);
+    }
+    function open_window(windowName){
+      window.open("newTab.html",windowName);
+    }
+    </script>
+</head>
+<body>
+
+    <div id="header">
+
+        <div class="container">
+
+
+        </div> <!-- END .container -->
+
+    </div> <!-- END #header -->
+
+    <div id="main_content">
+
+        <div id="contact_area">
+
+            <div class="container">
+
+                <h2 id="title">Navigation</h2>
+
+                <div id="contact_info">
+
+                    <div id="contact_info_left">
+
+
+                        <input type="button" id="MyAlert" onclick="show_alert()" value="Show alert" /><br /><br />
+                        <input type="button" id="MyPrompt" onclick="show_prompt()" value="Show prompt" /><br /><br />
+                        <input type="button" id="MyConfirm" onclick="show_confirm()" value="Show confirm box" /><br /><br />
+                        <input type="button" id="openNewTab" onclick="open_window('New tab')" value="Open New Tab" /><br /><br />
+                        <a href="newWindow.html" onclick="window.open('newWindow.html', 'newwindow', 'width=300, height=250'); return false;"> Open New Window</a><br /><br />
+                        <br />
+                        <br />
+                        <span id="output">
+                        </span>
+                        <br /><br />
+                        <iframe src="newFrame.html" style="border:2px dotted blue"></iframe>
+
+                    </div> <!-- END #contact_info_left -->
+
+                </div> <!-- END #contact_info -->
+
+            </div> <!-- END .container -->
+
+        </div> <!-- END #contact_area -->
+
+    </div> <!-- END #main_content -->
+
+
+        </div> <!-- END .container -->
+
+    </div> <!-- END #footer -->
+
+</body>
+</html>
